@@ -1,8 +1,10 @@
 
 // import { ExpansionPanelSummary } from '@material-ui/core'
-import styled,{createGlobalStyle , } from 'styled-components'
+import styled, { createGlobalStyle, } from 'styled-components'
+import * as fa from 'react-icons/fa'
 
-export const GlobalStyle =  createGlobalStyle`
+
+export const GlobalStyle = createGlobalStyle`
 body{
     margin:0px;
     padding:0px;
@@ -19,6 +21,7 @@ body{
 export const NavMenu = styled.div`
 position:sticky;
 top:0;
+z-index: 2;
 background-color:white;
 display:flex;
 flex-direction: row;
@@ -31,6 +34,7 @@ export const MenuItem = styled.div`
 width:fit-content;
 overflow:hidden;
 display:flex;
+background-color: white;
 
 
 
@@ -197,8 +201,8 @@ font-weight:600;
 color:#A7331E;
 `
 
-export const Label  = styled.div`
-margin:5em 0.5em 2em 5em;
+export const Label = styled.div`
+margin:5em 0.5em 2em 2.5em;
 border-bottom:1px solid #AFB1B0;
 font-family:'Yekan';
 font-size:13px;
@@ -208,12 +212,64 @@ padding:10px;
 
 export const CardsWrraper = styled.div`
 border:1px solid black;
-margin:2.9em 0.5em 2em 4em;
+margin:2.9em 0.5em 2em 2em;
 display:flex;
-
-
+justify-content: space-between;
+flex-wrap: wrap;
 `
 
-export const Card = styled.div`
+export const CardStyle = styled.div`
+    width: 286px;
+    height: 184px;
+    border: 1px solid #eee;
+    position: relative;
+    padding: 17px;
+    display: flex;
+    margin-bottom: 11px;
+`
 
+export const ItemImgContainer = styled.img`
+    border-radius: 8px;
+    margin-right: 5px;
+    width: 136px;
+    height: 136px;
+`
+
+export const ItemInfoBox = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: auto;
+    text-align: right;
+`
+export const ItemHeading = styled.h3`
+
+`
+export const ItemDetails = styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #AAAAAA;
+`
+export const ItemPrice = styled.p`
+
+`
+export const ItemTimeAndLocation = styled.p`
+    width: 90px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    direction: rtl;
+    font-size: 11px;
+`
+export const ItemChatBox = styled.div`
+   position: absolute;
+    bottom: 0;
+    left: 0;
+`
+export const ChatIcon = styled(fa.FaComment)`
+    color: #AAAAAA;
 `

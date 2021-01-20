@@ -1,28 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { TopWrapper, Inp, Selecte, Icon, SelectLabel, Sugessted, SugesstedWrraper,Label } from './styleComponents'
 import * as gr from "react-icons/gr";
 
-
-
-
-
-
-function TopMenu() {
-
-
+function TopMenu({onHandleInputValue}) {
+    const [value, setValue] = useState("");
+    function handleInputValue(e){
+        setValue(e.target.value)
+        onHandleInputValue("inputValue", e.target.value)
+    }
     return (<>
         <TopWrapper>
 
-            <Inp placeholder='جستجو در همه ی آگهی ها '></Inp>
+            <Inp placeholder='جستجو در همه ی آگهی ها' value={value} onChange={handleInputValue} />
             <Selecte>
 
                 <Icon><gr.GrDown /></Icon>
                 <SelectLabel>همه ی آگهی ها </SelectLabel>
 
             </Selecte>
-
-
-
 
         </TopWrapper>
         <SugesstedWrraper>

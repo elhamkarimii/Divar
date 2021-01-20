@@ -1,9 +1,11 @@
 import React from 'react'
-import { CardsWrraper ,Card } from './styleComponents'
-function Cards() {
+import { CardsWrraper } from './styleComponents';
+import Card from "./Card";
+
+function Cards({data}) {
     return (
         <CardsWrraper>
-            <Card></Card>
+            <Card data={data} />
         </CardsWrraper>
     )
 }
